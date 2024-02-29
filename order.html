@@ -20,9 +20,12 @@
           if(a!==null){
             alert("order has been placed successfully");
         }
-            else{
+            else if(a.length==null){
                 alert("please enter");
             }
+            else{
+                dispaly:none;
+            } 
           })
           var x=document.createElement("button")
           x.innerText="Cancel order";
