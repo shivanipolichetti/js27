@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+        var v=document.createElement("h1");
+        v.innerText="Shop now";
+        v.setAttribute("style","color:darkgray;margin-left:200px;text-decoration:underline;")
+        document.body.appendChild(v);
+        var w=document.createElement("button")
+        w.innerText="Order now";
+        document.body.appendChild(w);
+        w.setAttribute("style","border 4px dashed;width:150px;height:40px;margin:50px;background-color:green;")
+        w.addEventListener("click",function(){
+          var a=prompt("enter the amount");
+          if(a!==null){
+            alert("order has been placed successfully");
+        }
+          })
+          var x=document.createElement("button")
+          x.innerText="Cancel order";
+          x.setAttribute("style","border 4px dashed;width:150px;height:40px;margin:100px;background-color:red;")
+          document.body.appendChild(x);
+          x.addEventListener("click",function(){
+            confirm("You order has been cancelled");
+          })
+
+          
+
+       
+    </script>
+</body>
+</html>

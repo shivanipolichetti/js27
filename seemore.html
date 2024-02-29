@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  body{
+    text-align: center;
+  }
+</style>
+<body>
+  
+    <script>
+      var a=localStorage.getItem("selectedproduct");
+      var b=JSON.parse(a);
+      var ma = document.createElement("div");
+      document.body.appendChild(ma);     
+      var title = document.createElement('h1');
+      title.innerText = b.title;
+      ma.appendChild(title);
+      var img=document.createElement("img")
+      img.src=b.image;
+      img.setAttribute("style","width:100px;height:100px;")
+      ma.appendChild(img);
+      var category = document.createElement('h6');
+      category.innerText = b.category;
+      ma.appendChild(category);
+      var price = document.createElement('h6');
+      price.innerText ="₹" +b.price;
+      price.setAttribute("style","font-size:20px;")
+      ma.appendChild(price);
+     
+      var main = document.createElement("button");
+      main.innerText = "Buy now";
+      ma.appendChild(main);
+      ma.addEventListener("click", function () {
+          window.open("./order.html");
+      });
+
+      var rev = document.createElement("div");
+      rev.innerHTML = "<br><strong><u>Reviews</u></strong>";
+      ma.appendChild(rev);
+
+      var rev1 = document.createElement("div");
+      rev1.innerHTML = "<br>Neha<br><b>Very nice!!!</b>&#9734&#9734&#9734&#9734&#9734";
+      rev.appendChild(rev1);
+
+      var rev2 = document.createElement("div");
+      rev2.innerHTML = "<br>Hari<br><b>Quality is good and size is incorrect</b>&#9734&#9734&#9734";
+      rev.appendChild(rev2);
+
+      var rev3 = document.createElement("div");
+      rev3.innerHTML = "<br>nick<br><b>worst product don't buy it</b>&#9734&#9734";
+      rev.appendChild(rev3);
+
+      var rev4 = document.createElement("div");
+      rev4.innerHTML = "<br>Priya<br><b>It is good for dailywear</b>&#9734&#9734&#9734&#9734";
+      rev.appendChild(rev4);
+  </script>
+
+</body>
+</html>
